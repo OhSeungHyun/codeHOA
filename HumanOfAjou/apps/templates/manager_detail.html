@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>HOA Manager</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style_201408220522.css">
+    <link rel='stylesheet' href='../static/css/humans_detail.css'/>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Manager</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a>휴먼</a></li>
+                <li><a>아주</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class = "Detail_Container">
+            <div class = "Humans_title1">
+                <h1><a>2014.10.06</a></h1>
+                <button class="manager_list"><h5>글목록</h5></button>
+            </div>
+           
+            <div class ="Humans_detail">
+                <!-- humans picture area -->
+                <div class ="Humans_detail_img_area">
+                    <div class ="Humans_detail_img">
+                        <img class ="Humans_detail_img" data-toggle="modal" data-target=".human-modal" src="../static/images/img1.jpg" />
+                    </div>          
+                </div>
+                <!-- text1(interview) area -->
+                
+                <div class ="Humans_detail_text1_area">
+                    "When I was 12 years old, a missionary saw me and suggested that I learn how to do flower arrangements. I said, ‘Dudes don’t do things like flower arrangements’. The missionary then said, ‘In life, there’s a difference between choosing not to do something because you don’t know it and being knowledgeable about something and then choosing not to do it.’ My view completely changed after he said this. So I learned how to do flower arrangements as well as some other things, but in the end I ended up choosing to run my own flower shop. 30 years have passed since that moment.”
+                    <br>
+                    <br>
+                    “제가 12살 때였는데, 선교사가 저보고 꽃을 배우라고 권하더라구요. 그래서 제가 ‘사내새끼가 무슨 꽃을 배워요.’라고 했어요. 그랬더니 선교사가 ‘살면서 모르고 안 하는 것과 알고 안 하는 것은 다르다’라고 말하더라구요. 그 말에 제가 완전히 넘어갔어요. 그래서 그 후 꽃을 배웠는데, 다른 것도 좀 하다가 결국 꽃집 운영을 선택했어요. 그렇게 30년이 흘렀죠.” 
+                </div>
+                <!-- text2(Q/A per month) area -->
+                <div class ="Humans_detail_text1_area">
+                    <p>이달의 질문</p>
+                    "If you got 48 hours for today, not 24 hours, what would you do?”
+                    <br>
+                    "오늘 하루만 24시간이 아닌 48시간이 주어진다면 무엇을 하고 싶으세요?”
+                    <br>
+                </div>
+            </div>
+            <!-- image modal -->
+            <div class="modal fade human-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <img class ="Detail_img_modal" src="../static/images/img1.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div><!-- /Humans-Detail Content -->
+
+
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>HOA Manager</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style_201408220522.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand">Manager</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a>휴먼</a></li>
+                <li><a>아주</a></li>
+            </ul>
+       </div>
+    </nav>
+
+    <div class="container">
+        <div class="llArticleList">
+            <div class="page-header">
+                <h1>HUMANS LIST
+                    <a href="{{ url_for('humans_create') }}">글쓰기</a>
+                </h1>
+            </div>
+                {% if context.humans_list %}
+                    {% for humans in context.humans_list %}
+                        <div class="well">
+                            <div class ="Humans_boxes">
+                                <div class = "Humans_title">
+                                    <h1><a> {{ humans.date_created }} </a></h1>
+                                </div>
+                                <div class= "Humans_buttons">
+                                    <a href="{{ url_for('humans_update', id=humans.id) }}"><h4>글수정</h4></a>
+                                    <a href="{{ url_for('humans_delete', id=humans.id) }}"><h4>삭제</h4></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-list">
+                        글이 존재하지 않습니다. 새로운 글을 등록해주세요.
+                    </div>
+                {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>
+
