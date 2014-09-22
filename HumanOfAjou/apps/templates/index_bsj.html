@@ -139,7 +139,9 @@ $(document).ready(function() {
 				<div id="container">
 					{% if context.humans_list %}
                         {% for humans in context.humans_list %}
+                        <a href="http://www.naver.com">
                             <div class="grid">
+
 
                                 <div class="imgholder">
                                     {% if humans.photo %}
@@ -161,6 +163,7 @@ $(document).ready(function() {
                                 <i class="fa fa-share-alt"></i><span class ="Humans_counts">20</span>
 
                             </div>
+                        </a>
                         {% endfor %}
                     {% else %}
                         <div class="no-list">
