@@ -56,14 +56,16 @@ def humans_update(id):
     upload_url = blobstore.create_upload_url('/manager/humans/update/' + str(humans.id))
     if request.method == 'POST':
         if form.validate_on_submit():
+            previous = humans.photo
             form.populate_obj(humans)
             f = request.files['photo']
             if f:
                 header = f.headers['Content-Type']
                 parsed_header = parse_options_header(header)
                 blob_key = parsed_header[1]['blob-key']
-
                 humans.photo = blob_key
+            else:
+                humans.photo = previous
 
             db.session.commit()
         return redirect(url_for('humans_list', id=id))
@@ -88,13 +90,10 @@ def manager():
 
     return render_template("manager_human.html", context=context, active_tab='managerHuman_tab')
 
-@app.route('/ajou', methods=['GET'])
-def ajou_list():
-    return render_template("ajou_sec.html", active_tab='ajou_tab')
 
 @app.route('/us', methods=['GET'])
 def aboutUs():
-    return render_template("about_us_sec.html", active_tab='aboutus_tab')
+    return render_template("about_us.html", active_tab='aboutus_tab')
 
 @app.route('/epilogue', methods=['GET'])
 def epilogue():

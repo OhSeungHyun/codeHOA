@@ -10,22 +10,22 @@
 	<!-- from this is Blocksit library -->
 	<!-- start with flat_UI -->
 	<script src="../static/js/jquery-ui.js"></script>
-	<script src="../static/js/style.js"></script>
 
-	<link rel='stylesheet' href='../static/css/index_bsj.css' media='screen' />
-		<!-- start with bootstrap -->
+
+	<!-- start with bootstrap -->
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
 	<link href="../static/css/flat-ui.css" rel="stylesheet">
+	<link rel='stylesheet' href='../static/css/index_bsj.css' media='screen' />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="../static/js/blocksit.min.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/style.js"></script>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="../static/js/blocksit.min.js"></script>
-<script src="../static/js/bootstrap.js"></script>
-
-<!-- for fontawesome -->
-<link rel="stylesheet" href="../static/css/font-awesome.min.css">
-<!-- responsive weㅑb -->
+    <!-- for fontawesome -->
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <!-- responsive weㅑb -->
 <script>
 $(document).ready(function() {
 	//vendor script
@@ -80,12 +80,44 @@ $(document).ready(function() {
 
 </script>
 <!-- responsive app end -->
-<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="shortcut icon" href="../static/images/small-logo.png" />
 <link rel="canonical" href="http://www.inwebson.com/demo/blocksit-js/demo2/" />
 
 </head>
 
 <body>
+    <nav class="navbar navbar-default" role="navigation" id = "Humans_nav_bar_1">
+		<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+			      <span class="sr-only">Toggle navigation</span>
+			    </button>
+			<a class="navbar-brand" href="#">
+				<img src="../static/images/middle-logo.png" class = "HumansHeaderLogo">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-01">
+			<ul class="nav navbar-nav">
+				<li{% if active_tab == 'aboutus_tab' %} class="active"{% endif %}><a href="{{ url_for('aboutUs') }}">ABOUT US</a></li>
+				<li{% if active_tab == 'humans_tab' %} class="active"{% endif %}><a href="{{ url_for('humans_list') }}">HUMANS</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav><!-- /navbar -->
+	<nav class="navbar navbar-default" role="navigation" id = "Humans_nav_bar_2">
+		<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+			      <span class="sr-only">Toggle navigation</span>
+			    </button>
+			<a class="navbar-brand" href="#">
+				<img src="../static/images/middle-logo.png" class = "HumansHeaderLogo">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-01">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#fakelink">ABOUT US</a></li>
+				<li><a href="#fakelink">HUMANS</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav><!-- /navbar -->
 	<div class ="Humans_content_post">
 		<div class = "Humans_container">
 			<header>
@@ -139,30 +171,32 @@ $(document).ready(function() {
 				<div id="container">
 					{% if context.humans_list %}
                         {% for humans in context.humans_list %}
+
                         <a href="http://www.naver.com">
-                            <div class="grid">
+                        	<div class="grid">
 
 
-                                <div class="imgholder">
-                                    {% if humans.photo %}                                     
-                                            <img src="{{ url_for('photo_get_resized', blob_key=humans.photo) }}"/>
-                                       
-                                    {% else %}
-                                        <p>이미지가 없습니다.</p>
-                                    {% endif %}
-                                </div>
+                        		<div class="imgholder">
+                        			{% if humans.photo %}
+                        			<img src="{{ url_for('photo_get_resized', blob_key=humans.photo) }}"/>
 
-                                <div class="grid_contents">
-                                    <p> {{ humans.text }} </p>
-                                    <br>
-                                    <p> {{ humans.q_month }} </p>
-                                </div>
-                                <i class="fa fa-eye"></i><span class ="Humans_counts">900</span>
-                                <i class="fa fa-heart"></i><span class ="Humans_counts">300</span>
-                                <i class="fa fa-share-alt"></i><span class ="Humans_counts">20</span>
+                        			{% else %}
+                        			<p>이미지가 없습니다.</p>
+                        			{% endif %}
+                        		</div>
 
-                            </div>
+                        		<div class="grid_contents">
+                        			<p> {{ humans.text }} </p>
+                        			<br>
+                        			<p> {{ humans.q_month }} </p>
+                        		</div>
+                        		<i class="fa fa-eye"></i><span class ="Humans_counts">900</span>
+                        		<i class="fa fa-heart"></i><span class ="Humans_counts">300</span>
+                        		<i class="fa fa-share-alt"></i><span class ="Humans_counts">20</span>
+
+                        	</div>
                         </a>
+
                         {% endfor %}
                     {% else %}
                         <div class="no-list">

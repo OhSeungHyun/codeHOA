@@ -15,6 +15,7 @@ body p{
 header, section, footer, hgroup{
 	display:block;
 }
+}
 a {
 	color:#35BFFF;
 	text-decoration:none;
@@ -121,6 +122,7 @@ a:hover, a:active{
 
 	font-size:12px;
 	float:left;
+
 /*	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,15.4);
@@ -130,25 +132,10 @@ a:hover, a:active{
 	-o-transition: top 1s ease, left 1s ease;
 	-ms-transition: top 1s ease, left 1s ease;
 */}
-
 .grid:hover{
-	/*width:188px;
-	min-height:100px;
-	padding: 5px;
-	background:#fff;
+    border : solid rgba(0,255,255,0.2);
 
-	font-size:12px;
-	float:left;*/
-	border:solid rgba(0,255,255,0.1);
-/*	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
-	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
-	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,15.4);
-	*/
-/*	-webkit-transition: top 1s ease, left 1s ease;
-	-moz-transition: top 1s ease, left 1s ease;
-	-o-transition: top 1s ease, left 1s ease;
-	-ms-transition: top 1s ease, left 1s ease;
-*/}
+}
 
 .grid strong {
 	border-bottom:1px solid #ccc;
