@@ -1,12 +1,13 @@
 /*여기부터 기존에 있던 라이브러리 css*/
 @import url(http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb); 
+
+
 body{
 	margin:0;
 	padding:0;
 	color:#333;
 	font-size:15px;
 	font-family: 'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum; 
-	
 }
 
 body p{
@@ -65,7 +66,7 @@ a:hover, a:active{
 	bottom:0;
 	left:0;
 	line-height:20px;
-	color:#888;
+	color:#CAD4DB;
 	font-size:13px;
 	background:rgb(0, 0, 0);
 	background:rgba(0, 0, 0, 0.8);
@@ -90,19 +91,12 @@ a:hover, a:active{
 }
 #wrapper h2{
 	margin:5px 0;
-	color:#FF6D99;
-	text-shadow:1px 1px 2px #A50031;
+	color:gray;
+
 	font-size:33px;
 	font-family:Arial Narrow, Arial, sans-serif;
 }
-#wrapper h3{
-	font-style:italic;
-	font-weight:normal;
-	font-size:18px;
-	text-shadow:1px 1px 0 #fff;
-	color:#888;
-	margin:5px 0;
-}
+
 
 #container{
 	position:relative;
@@ -122,14 +116,14 @@ a:hover, a:active{
 /*	margin:-28px;*/	
 	font-size:12px;
 	float:left;
-	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+/*	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,15.4);
 	
 	-webkit-transition: top 1s ease, left 1s ease;
 	-moz-transition: top 1s ease, left 1s ease;
 	-o-transition: top 1s ease, left 1s ease;
-	-ms-transition: top 1s ease, left 1s ease;
+	-ms-transition: top 1s ease, left 1s ease;*/
 }
 
 .grid strong {
@@ -150,10 +144,14 @@ a:hover, a:active{
 	background:#ccc;
 	display:block;
 }
-.Humans_counts{
-	padding-left:7px;
+.grid_contents{
+	margin-top: 10px;
 }
-
+.Humans_counts{
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:10px;
+}
 @media screen and (max-width : 1240px) {
 	body{
 		overflow:auto;
@@ -192,7 +190,7 @@ padding: 80px 0px;
   z-index: -1;
   
   display: block;
-  background: url('../images/camera_human.jpg') no-repeat center center fixed;
+  background: url('../../images/camera_human.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -275,104 +273,46 @@ margin: 0 auto;
 	padding-top:10px;
 	padding-bottom:40px;
 }
-/*
-세개의 섹션 있는 곳 시작*/
-.Humans_three_container {
-	text-align:center;
+/*여기까지가 배경이미지를 넣는 곳*/
+
+
+#wrapper {
+margin-top: 5px;
+width: 100%;
 }
-.Humans_threesec_mid_align{
-	padding:auto;
-	margin:auto;
-	height: 580px;
-	width: 100%;
-}
-.Humans_three_container li{
-	display: inline-block;
-	float:left;
-	
-	margin:5px;
-	width: 32%;
-}
-.Humans_image_box{
-	height: 220px;
-	width: 100%;
-	
+.top-wrapper{
+	padding-bottom:60px;
+	height:130px;
+	position:relative;
+	margin-bottom: 50px;
 }
 
-.Humans_image_box img{
-	width: 200px;
-	height: 200px;
-
+/*THIS IS CATEGORY*/
+.contents_category_bsj{
+	margin-top:55px;
 }
-#three_section_blank {
-	margin-top: 30px ;
-}
-/*로고 설명 섹션 시작*/
-
-.Humans_logo_section{
-	height: 300px ;
-}
-.Humans_logo_image{
-	width: 48%;
-	
-	height:100%;
+.radio{
 	float: left;
+	margin: 10px;
 }
-.Humans_logo_image img{
-	height: 250px;
-	 display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.Humans_logo_content{
-	width:50%;
-	float: left;
-	text-align: center;
-
-}
-.Humans_text_middle{
-	margin-top: 70px ;
-	margin-left: 20px;
-}
-.Humans_member{
-	margin-top:150px;
-}
-
-
-.Humans_introduce_video{
-	width: 100%;
-	height: 400px;
-	margin-top:auto;
-	margin-bottom:auto;
-	margin-left:auto;
-	margin-right:auto;
-	background-color: black;
-}
-.Humans_introduce_video{
-	margin-top:80px;
-}
-.Are_you_ready{
-	width:100%;
-}
-.Are_you_ready_content{
-	width: 80%;
-	margin:auto;
-	margin-top: 50px;
+.dropdown{
+	float: right;
+	width: 150px;
 }
 .Humans_border{
 display: block;
-height: 5px;
+height: 2px;
 margin-top: 20px;
 margin-bottom: 30px;
 width: 100%;
 background: none repeat scroll 0 0 #999999;
+}
+.Humans_title_location{
+	margin-top:50px;
+	margin-bottom:10px;
 
 }
-.Humans_botton_middle{
-	width: 200px;
-	margin:auto;
-	padding-top: 50px;
-}
+
 /*여기서부터 footer*/
 .Humans_footer{
 	margin-top: 100px;
@@ -381,7 +321,7 @@ background: none repeat scroll 0 0 #999999;
 
 }
 .Footer_left{
-	width: 45%;
+	width: 50%;
 	float:left;
 }
 .Footer_left h6 p{
@@ -389,7 +329,7 @@ background: none repeat scroll 0 0 #999999;
 	font-color:white;
 }
 .Footer_right {
-	width: 55%;
+	width: 50%;
 	float:left;
 }
 
@@ -414,21 +354,52 @@ background: none repeat scroll 0 0 #999999;
 }
 .Icon_gather{
 	width: 90%;
-	height: 100px;
-	float: center;
+	height: 100%;
+	float: left;
 	margin-bottom:10px;
 }
 
 .Footer_left li {
 	font-color: white;
-	color:white;
+	color:#CAD4DB;
+	font-size: 14px;
 }
 
 .Footer_left p {
 	font-color: white;
-	color:white;
+	color:#CAD4DB;
 }
 .Footer_right p {
 	font-color: white;
-	color:white;
+	color:#CAD4DB;
+	font-size: 14px;
+}
+.Humans_copyright{
+	height: 10%;
+	width: 90%;
+	text-align: center;
+	color: #CAD4DB;
+	font-size: 16px;
+}
+/*footer 끝*/
+/*여기서부터 네브바 CSS*/
+.HumansHeaderLogo{
+	height: 30px;
+	width:30px;
+}
+.navbar{
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255,255,255,0.1);
+	z-index: 99;
+}
+#Humans_nav_bar_1{
+	background-color: rgba(255,255,255,0);
+}
+#Humans_nav_bar_2{
+	background-color: rgba(255,255,255,1);
+	display:none;
+}
+.collapse{
+	float: right;
 }

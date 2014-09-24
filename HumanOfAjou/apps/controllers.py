@@ -10,19 +10,32 @@ from werkzeug.http import parse_options_header
 import logging
 
 
-
-
 @app.route('/', methods=['GET'])
 def humans_list():
     context = {}
     humans_list = Humans.query.order_by(desc(Humans.date_created)).all()
     context['humans_list'] = humans_list
 
-    return render_template("index_bsj.html", context=context, active_tab='humans_tab')
+    return render_template("index.html", context=context, active_tab='humans_tab')
+
+
+@app.route('/<int:id>', methods=['GET'])
+def humans_detail(id):
+    humans = Humans.query.get(id)
+    return render_template("humans/detail.html", humans=humans, active_tab='humans_tab')
+
+
+@app.route('/manager', methods=['GET'])
+def manager():
+    context = {}
+    humans_list = Humans.query.order_by(desc(Humans.date_created)).all()
+    context['humans_list'] = humans_list
+
+    return render_template("manager/list.html", context=context, active_tab='managerHuman_tab')
 
 
 @app.route('/manager/humans/create/', methods=['GET', 'POST'])
-def humans_create():
+def manager_humans_create():
     form = HumansForm()
     upload_url = blobstore.create_upload_url('/manager/humans/create/')
     if request.method == 'POST':
@@ -46,10 +59,11 @@ def humans_create():
             flash(u'게시글을 작성하였습니다.', 'success')
             return redirect(url_for('humans_list'))
 
-    return render_template('humans_create.html', form=form, upload_url=upload_url)
+    return render_template('manager/create.html', form=form, upload_url=upload_url)
+
 
 @app.route('/manager/humans/update/<int:id>', methods=['GET', 'POST'])
-def humans_update(id):
+def manager_humans_update(id):
     humans = Humans.query.get(id)
 
     form = HumansForm(request.form, obj=humans)
@@ -70,10 +84,11 @@ def humans_update(id):
             db.session.commit()
         return redirect(url_for('humans_list', id=id))
 
-    return render_template('humans_update.html', form=form, upload_url=upload_url)
+    return render_template('manager/update.html', form=form, upload_url=upload_url)
+
 
 @app.route('/manager/humans/delete/<int:id>', methods=['GET'])
-def humans_delete(id):
+def manager_humans_delete(id):
     humans = Humans.query.get(id)
 
     db.session.delete(humans)
@@ -82,34 +97,31 @@ def humans_delete(id):
     flash(u'게시글을 삭제하였습니다.', 'success')
     return redirect(url_for('manager'))
 
-@app.route('/manager', methods=['GET'])
-def manager():
-    context = {}
-    humans_list = Humans.query.order_by(desc(Humans.date_created)).all()
-    context['humans_list'] = humans_list
-
-    return render_template("manager_human.html", context=context, active_tab='managerHuman_tab')
-
 
 @app.route('/us', methods=['GET'])
 def aboutUs():
-    return render_template("about_us.html", active_tab='aboutus_tab')
+    return render_template("aboutus/us.html", active_tab='aboutus_tab')
+
 
 @app.route('/epilogue', methods=['GET'])
 def epilogue():
     return render_template("epilogue.html", active_tab='epilogue_tab')
 
+
 @app.route('/humans/thumbnail', methods=['GET'])
 def humans_thumbnail():
     return render_template("thumbnail.html", active_tab='humans_tab')
+
 
 @app.route('/ajou/thumbnail', methods=['GET'])
 def ajou_thumbnail():
     return render_template("thumbnail.html", active_tab='ajou_tab')
 
+
 @app.route('/upload', methods=['GET'])
 def upload():
     return render_template("upload_forms.htaml", active_tab='ajou_tab')
+
 
 @app.route('/photo/get/<path:blob_key>/', methods=['GET'])
 def photo_get(blob_key):

@@ -7,9 +7,10 @@
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/cacerts" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/cherrypy" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/concurrent" />
+      <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/deprecated_enum" />
+      <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/distutils" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/docker" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/endpoints-1.0" />
-      <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/enum" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/fancy_urllib" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/google-api-python-client" />
       <root url="file://$USER_HOME$/google-cloud-sdk/platform/google_appengine/lib/graphy" />

@@ -1,13 +1,12 @@
 /*여기부터 기존에 있던 라이브러리 css*/
 @import url(http://api.mobilis.co.kr/webfonts/css/?fontface=NanumGothicWeb); 
-
-
 body{
 	margin:0;
 	padding:0;
 	color:#333;
 	font-size:15px;
 	font-family: 'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum; 
+	
 }
 
 body p{
@@ -91,12 +90,19 @@ a:hover, a:active{
 }
 #wrapper h2{
 	margin:5px 0;
-	color:gray;
-
+	color:#FF6D99;
+	text-shadow:1px 1px 2px #A50031;
 	font-size:33px;
 	font-family:Arial Narrow, Arial, sans-serif;
 }
-
+#wrapper h3{
+	font-style:italic;
+	font-weight:normal;
+	font-size:18px;
+	text-shadow:1px 1px 0 #fff;
+	color:#888;
+	margin:5px 0;
+}
 
 #container{
 	position:relative;
@@ -116,14 +122,14 @@ a:hover, a:active{
 /*	margin:-28px;*/	
 	font-size:12px;
 	float:left;
-/*	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,15.4);
 	
 	-webkit-transition: top 1s ease, left 1s ease;
 	-moz-transition: top 1s ease, left 1s ease;
 	-o-transition: top 1s ease, left 1s ease;
-	-ms-transition: top 1s ease, left 1s ease;*/
+	-ms-transition: top 1s ease, left 1s ease;
 }
 
 .grid strong {
@@ -144,8 +150,8 @@ a:hover, a:active{
 	background:#ccc;
 	display:block;
 }
-.grid_contents{
-	margin-top: 10px;
+.Humans_counts{
+	padding-left:7px;
 }
 
 @media screen and (max-width : 1240px) {
@@ -186,7 +192,7 @@ padding: 80px 0px;
   z-index: -1;
   
   display: block;
-  background: url('../images/camera_human.jpg') no-repeat center center fixed;
+  background: url('../../images/camera_human.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -269,81 +275,103 @@ margin: 0 auto;
 	padding-top:10px;
 	padding-bottom:40px;
 }
-/*여기까지가 배경이미지를 넣는 곳*/
-.Ajou_sec_explain{
-	height: 140px;
-	padding-top: 100px;
+/*
+세개의 섹션 있는 곳 시작*/
+.Humans_three_container {
+	text-align:center;
 }
-/*.Ajou_sec_explain_box{
-	height: 70%;
-	width: 70%;
-	margin: auto;
-}*/
-.Humans_explain{
-	width: 40%;
-	float: left;
-
+.Humans_threesec_mid_align{
+	padding:auto;
+	margin:auto;
+	height: 580px;
+	width: 100%;
 }
-.Humans_explain p {
-	font-size: 15px;
+.Humans_three_container li{
+	display: inline-block;
+	float:left;
+	
+	margin:5px;
+	width: 32%;
 }
-.Humans_upload{
-	width: 30%;
-	float: left;
-}
-#Picture_upload{
-	width: 230px;
-	height:100px;
-	float: right;
-
-}
-#wrapper {
-margin-top: 5px;
-width: 100%;
-}
-.top-wrapper{
-	padding-bottom:60px;
-	height:300px;
-	position:relative;
-	margin-bottom: 50px;
+.Humans_image_box{
+	height: 220px;
+	width: 100%;
+	
 }
 
-/*THIS IS CATEGORY*/
-.contents_category_bsj{
-	float: left;
-	width: 30%;
-}
-.radio{
-	float: left;
-	margin: 10px;
-}
-.dropdown{
-	float: center;
+.Humans_image_box img{
 	width: 200px;
-	margin-left:10%;
+	height: 200px;
+
+}
+#three_section_blank {
+	margin-top: 30px ;
+}
+/*로고 설명 섹션 시작*/
+
+.Humans_logo_section{
+	height: 300px ;
+}
+.Humans_logo_image{
+	width: 48%;
+	
+	height:100%;
+	float: left;
+}
+.Humans_logo_image img{
+	height: 250px;
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Humans_logo_content{
+	width:50%;
+	float: left;
+	text-align: center;
+
+}
+.Humans_text_middle{
+	margin-top: 70px ;
+	margin-left: 20px;
+}
+.Humans_member{
+	margin-top:150px;
+}
+
+
+.Humans_introduce_video{
+	width: 100%;
+	height: 400px;
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: black;
+}
+.Humans_introduce_video{
+	margin-top:80px;
+}
+.Are_you_ready{
+	width:100%;
+}
+.Are_you_ready_content{
+	width: 80%;
+	margin:auto;
+	margin-top: 50px;
 }
 .Humans_border{
 display: block;
-height: 2px;
+height: 5px;
 margin-top: 20px;
 margin-bottom: 30px;
 width: 100%;
 background: none repeat scroll 0 0 #999999;
-}
-.Humans_title_location{
-	margin-top:50px;
-	margin-bottom:10px;
 
 }
-#button_size{
-	width: 170px;
-	height: 56px;
-}
-/*여기서부터 Grid 에 관한 것.*/
-.How_many_achieved{
-	margin-top: 110px;
-	height: 110px;
-	text-align: left;
+.Humans_botton_middle{
+	width: 200px;
+	margin:auto;
+	padding-top: 50px;
 }
 /*여기서부터 footer*/
 .Humans_footer{
@@ -404,6 +432,3 @@ background: none repeat scroll 0 0 #999999;
 	font-color: white;
 	color:white;
 }
-
-/*footer 끝*/
-
