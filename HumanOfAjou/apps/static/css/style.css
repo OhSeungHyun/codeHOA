@@ -132,7 +132,7 @@ a:hover, a:active{
 	-o-transition: top 1s ease, left 1s ease;
 	-ms-transition: top 1s ease, left 1s ease;
 */}
-.grid:hover{
+.grid a:hover{
     border : solid rgba(0,255,255,0.2);
 
 }

@@ -31,6 +31,7 @@
 
 // });
 
+$(document).ready(function() {
 
 $(window).scroll(function() {
       // get scroll position
@@ -68,3 +69,5 @@ $( window ).bind( 'scroll', function(){
 });
 $(':radio').radio();
 
+
+}
