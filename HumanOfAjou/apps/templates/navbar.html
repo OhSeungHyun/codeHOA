@@ -14,7 +14,9 @@
             US</a></li>
             <li
             {% if active_tab == 'humans_tab' %} class="active"{% endif %}><a
-                href="{{ url_for('humans_list') }}">HUMANS</a></li>
+            href="{{ url_for('humans_list') }}">HUMANS</a></li>
+            <li
+            {% if active_tab == 'ajou_tab' %} class="active"{% endif %}><a href="{{ url_for('aboutUs') }}">AJOU</a></li>
         </ul>
     </div>
 </nav>

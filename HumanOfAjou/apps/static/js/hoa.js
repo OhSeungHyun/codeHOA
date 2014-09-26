@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    $(window).scroll(function () {
-        // get scroll position
-        var s = $(window).scrollTop();
-        // scroll value and opacity
-        opacityVal = (s / 280.0);
-        // opacity value 0% ~ 100%
-        $('.blurred-img').css('opacity', opacityVal);
-    });
+    // $(window).scroll(function () {
+    //     // get scroll position
+    //     var s = $(window).scrollTop();
+    //     // scroll value and opacity
+    //     opacityVal = (s / 280.0);
+    //     // opacity value 0% ~ 100%
+    //     $('.blurred-img').css('opacity', opacityVal);
+    // });
 
 
 // navbar fixed by scroll
