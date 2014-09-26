@@ -154,7 +154,9 @@ a:hover, a:active {
     background: #ccc;
     display: block;
 }
-
+.grid a{
+     text-decoration : none; color : #000;
+}
 @media screen and (max-width: 1240px) {
     body {
         overflow: auto;
