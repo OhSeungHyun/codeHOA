@@ -24,10 +24,10 @@ footer{
     padding-top: 20px;
 }
 .FooterBsj{
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(14,46,67,0.2);
     margin-top: 40px;
 }
-#FooterCategory ul li{
+#FooterCategory li{
     list-style-type: none;
 }
 @media (max-width: 665px) {
@@ -42,7 +42,9 @@ footer{
     #FooterCategory{
     width: 350px;
     float: left;
-
+    }
+    #FooterCategory li{
+    list-style-type: none;
     }
     #FooterDonate{
     width: 350px;

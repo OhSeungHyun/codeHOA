@@ -155,7 +155,7 @@ a:hover, a:active {
     display: block;
 }
 .grid a{
-     text-decoration : none; color : #000; 
+     text-decoration : none; color : #000;
 }
 @media screen and (max-width: 1240px) {
     body {
